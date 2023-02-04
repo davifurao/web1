@@ -2,7 +2,7 @@
   import Index from "./lib/Index.svelte";
   import Navbar from "./lib/Navbar.svelte";
   import Register from "./lib/Register.svelte";
-  import login from "./lib/Login.svelte"
+  import Login from "./lib/Login.svelte"
   import { currentPage, isLogged } from "./stores";
   import Home from "./lib/Home.svelte";
 </script>

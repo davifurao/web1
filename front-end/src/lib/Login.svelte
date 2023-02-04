@@ -1,6 +1,6 @@
 <script>
 import {currentPage,isLogged} from "../stores"
-    import Home from "./Home.svelte";
+    //import Home from "./Home.svelte";
 
 let username = "";
   let password = "";
