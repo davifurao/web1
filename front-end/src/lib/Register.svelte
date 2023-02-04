@@ -3,14 +3,16 @@
     let password = '';
     let password2 = '';
     function handle() {
-        // aqui vamos submeter o formulário
-        if (password != password2) return;
-        console.log('usuário', {
-            username,
-            password,
-            password2
-        })
-    }
+    // aqui vamos submeter o formulário
+    if (password != password2) return;
+    let form = new FormData();
+    form.append('username', username);
+    form.append('password', password);
+    fetch('http://localhost:8000/adicionar-usuario.php', {
+        method: 'POST',
+        body: form
+    })
+}
     </script>
     
     <h1>Registro de usuário</h1>
