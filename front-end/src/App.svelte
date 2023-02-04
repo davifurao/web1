@@ -2,8 +2,9 @@
   import Index from "./lib/Index.svelte";
   import Navbar from "./lib/Navbar.svelte";
   import Register from "./lib/Register.svelte";
-  import Login from "./lib/Login.svelte"
+  import login from "./lib/Login.svelte"
   import { currentPage, isLogged } from "./stores";
+  import Home from "./lib/Home.svelte";
 </script>
 
 <main>
@@ -22,8 +23,11 @@
   {:else if $currentPage == 'register'}
     <Register />
 
-  {:else if $currentPage == 'Login'}
+  {:else if $currentPage == 'login'}
     <Login />
+
+  {:else if $currentPage == 'home'}
+  <Home/>
   {/if}
 
 </main>

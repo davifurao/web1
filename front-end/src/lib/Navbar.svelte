@@ -7,12 +7,13 @@
         credentials: "include",
     });
     $isLogged = false;
+    $currentPage = 'index';
   }
   
   </script>
   
   
-   <button on:click={() => $currentPage = 'index'}>
+   <button on:click={() =>($currentPage = 'index')}>
     Index
    </button>
   
@@ -20,15 +21,16 @@
   
  {#if !$isLogged}
   
-  <button on:click={() => $currentPage = 'register'}>
+  <button on:click={() => ($currentPage = 'register')}>
       Register
    </button>
    
-   <button on:click={()=>$currentPage = 'login'}>
+   <button on:click={()=>($currentPage = 'register')}>
     login
     </button>
 {:else}
-    <button on:click={()=>$currentPage = 'home'}>Pagina inicial</button>
+    <button on:click={()=>($currentPage = 'home')}>Pagina inicial</button>
 
+    <button on:click={()=>($currentPage = 'home')}>Home</button>
     <button on:click={logout}>Sair</button>
 {/if}

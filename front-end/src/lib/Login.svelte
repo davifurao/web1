@@ -1,5 +1,6 @@
 <script>
-import {isLogged} from "../stores"
+import {currentPage,isLogged} from "../stores"
+    import Home from "./Home.svelte";
 
 let username = "";
   let password = "";
@@ -17,6 +18,7 @@ let username = "";
       return;
     }
     $isLogged = true;
+    $currentPage = 'home';
   }
 </script>
 
@@ -28,4 +30,3 @@ let username = "";
   <button>Login</button>
 </form>
 
-</script>
