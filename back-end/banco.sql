@@ -4,11 +4,9 @@ create database web1_avaliacao;
 use web1_avaliacao;
 
 CREATE TABLE usuario (
-    USUARIO_id INT PRIMARY KEY  NOT NULL AUTO_INCREMENT,
+    USUARIO_id INT PRIMARY KEY  AUTO_INCREMENT,
     USUARIO_nome varchar(60) NOT NULL,
-    USUARIO_senha varchar(50) NOT NULL,
-    USUARIO_CONTATOS INT NOT NULL,
-    FOREIGN KEY (USUARIO_CONTATOS) REFERENCES contatos (CONTATOS_id)
+    USUARIO_senha varchar(50) NOT NULL, 
 );
 
 CREATE TABLE contatos (
@@ -16,8 +14,7 @@ CREATE TABLE contatos (
     CONTATOS_nome_contato VARCHAR(60) NOT NULL,
     CONTATOS_telefone VARCHAR (15) NOT NULL,
     CONTATOS_email VARCHAR(40),
-    CONTATOS_endereco VARCHAR(60),
-    CONTATOS_USUARIO INT NOT NULL,
-    FOREIGN KEY (CONTATOS_USUARIO) REFERENCES usuario(USUARIO_id)
+    CONTATOS_endereco VARCHAR(60)
+    CHAVE_estrangeira
 );
 
